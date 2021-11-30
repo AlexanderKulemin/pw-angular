@@ -1,0 +1,16 @@
+.item {
+  color: #fff;
+}
+
+.icon {
+  width: 30px;
+  margin-right: 12px;
+
+  &_logout {
+    margin: 0 8px 0 4px;
+  }
+
+  &_history {
+    margin: 0 9px 0 3px;
+  }
+}

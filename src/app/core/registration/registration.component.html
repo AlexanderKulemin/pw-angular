@@ -1,0 +1,34 @@
+<div class="box box-form">
+  <mat-card class="form">
+    <mat-card-title class="form__header">Registration</mat-card-title>
+    <form class="example-form" [formGroup]="registrationForm" (submit)="submitRegistrationForm($event)">
+      <mat-form-field class="form__field" appearance="fill">
+        <mat-label>Username</mat-label>
+        <input matInput placeholder="Username" formControlName="username">
+        <mat-error *ngIf="hasFieldErrors('email')">Username required</mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="form__field" appearance="fill">
+        <mat-label>Email</mat-label>
+        <input matInput placeholder="Email" formControlName="email">
+        <mat-error *ngIf="hasFieldErrors('email')">Invalid Email</mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="form__field" appearance="fill">
+        <mat-label>Password</mat-label>
+        <input matInput type="password" placeholder="Password" formControlName="password">
+        <mat-error *ngIf="hasFieldErrors('password')">Password must be at least 4 characters</mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="form__field" appearance="fill" *ngIf="passLength >= 4">
+        <mat-label>Confirm Password</mat-label>
+        <input matInput type="password" placeholder="Confirm Password" formControlName="confirm">
+        <span class="error" *ngIf="registrationForm.errors?.confirm && registrationForm.controls.confirm.touched">Password not match</span>
+      </mat-form-field>
+
+      <button mat-raised-button color="primary" class="form__btn">REGISTRATION</button>
+      <span class="separator"><i>or</i></span>
+      <a mat-button routerLink="/" class="form__btn">SIGN IN</a>
+    </form>
+  </mat-card>
+</div>

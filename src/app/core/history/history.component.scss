@@ -1,0 +1,15 @@
+.container-box {
+  display: flex;
+  flex-grow: 1;
+  height: auto;
+  min-height: 100%;
+}
+
+.content {
+  flex: 1;
+  padding: 30px;
+}
+
+.table {
+  width: 100%;
+}

@@ -1,0 +1,36 @@
+.note {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: inline-flex;
+  background: #46a35e;
+  color: #fff;
+  padding: 10px 70px 10px 15px;
+  border-radius: 6px;
+  box-shadow: 0 10px 10px rgba(#000, .2);
+  &_error {
+    background: #f44336;
+  }
+
+  &__close {
+    background: none;
+    border: none;
+    margin: 0 0 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    position: absolute;
+    right: 10px;
+    top: 7px;
+    padding: 2px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: all 350ms ease;
+
+    &:hover {
+      background: rgba(#fff, 0.2);
+    }
+  }
+}

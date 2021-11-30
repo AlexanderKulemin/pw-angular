@@ -1,0 +1,7 @@
+<div *ngIf="isShowNote" class="note" [ngClass]="{'note_error': isError}">
+  <span class="note__messgae">{{message}}</span>
+
+  <button (click)="closeNote()" class="note__close">
+    <mat-icon aria-hidden="false" aria-label="Close">close</mat-icon>
+  </button>
+</div>

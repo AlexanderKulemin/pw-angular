@@ -1,0 +1,38 @@
+<h1 mat-dialog-title>Create new transaction</h1>
+<form [formGroup]="form" (submit)="handleSubmit()">
+  <mat-form-field class="field" appearance="fill">
+    <mat-label>Choose user for transaction</mat-label>
+    <input type="text"
+      placeholder="User Name"
+      aria-label="Users"
+      matInput
+      (input)="handleChange($event)"
+      formControlName="user"
+      [matAutocomplete]="auto"
+    >
+
+    <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+      <mat-option *ngFor="let option of filteredOptions" [value]="option.name">
+        {{option.name}}
+      </mat-option>
+    </mat-autocomplete>
+
+    <mat-error *ngIf="form.controls['user'].touched && form.controls['user'].invalid">
+      User name is required
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill" class="field">
+    <mat-label>Amount PW</mat-label>
+    <input type="number" matInput formControlName="amount" placeholder="Amount">
+
+    <mat-error *ngIf="form.controls['amount'].touched && form.controls['amount'].invalid">
+      Amount is incorrect
+    </mat-error>
+  </mat-form-field>
+
+  <div mat-dialog-actions>
+    <button mat-button mat-dialog-close>Close</button>
+    <button mat-raised-button color="primary">Send</button>
+  </div>
+</form>

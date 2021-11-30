@@ -1,0 +1,18 @@
+<mat-nav-list>
+  <button class="item" mat-list-item (click)="createNewTransaction()">
+    <mat-icon class="icon" aria-hidden="false" aria-label="new transaction">add</mat-icon>
+    New Transaction
+  </button>
+  <a routerLink="/" class="item" mat-list-item>
+    <mat-icon class="icon icon_history" aria-hidden="false" aria-label="Main Page">home</mat-icon>
+    Main
+  </a>
+  <a routerLink="/history" class="item" mat-list-item>
+    <mat-icon class="icon icon_history" aria-hidden="false" aria-label="history">history</mat-icon>
+    History
+  </a>
+  <button class="item" mat-list-item (click)="handleLogOut()">
+    <mat-icon class="icon icon_logout" aria-hidden="false" aria-label="logout">logout</mat-icon>
+    Log Out
+  </button>
+</mat-nav-list>

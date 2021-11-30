@@ -1,0 +1,7 @@
+<h1 mat-dialog-title>Do you want to repeat transaction?</h1>
+  <div>User: {{data.username}}</div>
+  <div>Amount PW: {{data.amount | abs}}</div>
+<div mat-dialog-actions>
+  <button mat-raised-button mat-dialog-close color="warn">Cancel</button>
+  <button mat-raised-button (click)="handleSubmit()">Repeat</button>
+</div>

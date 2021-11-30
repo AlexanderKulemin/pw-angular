@@ -1,0 +1,22 @@
+.user {
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  align-items: center;
+  padding: 30px;
+
+  &__photo {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
+  }
+
+  &__name {
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+
+  &__balance {
+    font-size: 17px;
+  }
+}

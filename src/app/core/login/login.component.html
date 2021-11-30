@@ -1,0 +1,38 @@
+<div class="box box-form">
+  <mat-card class="form">
+    <mat-card-title class="form__header">Log In</mat-card-title>
+    <form class="example-form" [formGroup]="loginForm" (submit)="submitLoginForm($event)">
+      <div *ngIf="isShowError" class="error-box">{{errorMessage}}</div>
+      <mat-form-field class="form__field" appearance="fill">
+        <mat-label>Email</mat-label>
+        <input matInput placeholder="Email" formControlName="email">
+        <mat-error *ngIf="hasFieldErrors('email')">Invalid Email</mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="form__field" appearance="fill">
+        <mat-label>Password</mat-label>
+        <input matInput type="password" placeholder="Password" formControlName="password">
+        <mat-error *ngIf="hasFieldErrors('password')">Invalid Password</mat-error>
+      </mat-form-field>
+
+      <button mat-raised-button color="primary" class="form__btn">SIGN IN</button>
+      <span class="separator"><i>or</i></span>
+      <a mat-button routerLink="/registration" class="form__btn">SIGN UP</a>
+    </form>
+  </mat-card>
+</div>
+
+<!-- <div class="box box-form">
+  <div class="form">
+    <form>
+      <h3 class="form__header">Log In</h3>
+      <div class="field">
+        <input type="text" class="input" placeholder="Email">
+      </div>
+      <div class="field">
+        <input type="password" class="input" placeholder="Password">
+      </div>
+      <button class="btn">Send</button>
+    </form>
+  </div>
+</div> -->
