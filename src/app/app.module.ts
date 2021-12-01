@@ -6,6 +6,8 @@ import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NgxsModule } from '@ngxs/store';
+import { NgxsReduxDevtoolsPluginModule } from '@ngxs/devtools-plugin';
 
 import { LoginComponent } from './core/login/login.component';
 import { MatCardModule } from '@angular/material/card';
@@ -33,7 +35,7 @@ import { HistoryComponent } from './core/history/history.component';
 import { TableComponent } from './core/table/table.component';
 import { RepeatTransactionComponent } from './core/repeat-transaction/repeat-transaction.component';
 import { AbsPipe } from './pipes/abs.pipe';
-
+import { UserState } from '../app/store';
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
@@ -68,6 +70,8 @@ import { AbsPipe } from './pipes/abs.pipe';
     MatSortModule,
     ReactiveFormsModule,
     HttpClientModule,
+    NgxsModule.forRoot([UserState]),
+    NgxsReduxDevtoolsPluginModule.forRoot(),
   ],
   providers: [{
     provide: HTTP_INTERCEPTORS,
