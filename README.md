@@ -1,27 +1,40 @@
-# PwAngular
+# PW Application.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.5.
+![img.png](img.png)
 
-## Development server
+## Setup
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Download or clone repo.\
+\
+Run `npm install` in the project root folder to install dependencies
 
-## Code scaffolding
+## Available Scripts
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+In the project directory, you can run:
 
-## Build
+### `npm run start`
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-## Running unit tests
+### `npm run build`
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Builds the app for production to the `build` folder.
 
-## Running end-to-end tests
+## Technologies
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+![Angular](https://img.shields.io/badge/angular-%23DD0031.svg?style=for-the-badge&logo=angular&logoColor=white)
+![RXJS](https://img.shields.io/badge/RxJS-%23B7178C.svg?style=for-the-badge&logo=RxJS&logoColor=white)
+![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/css3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![SASS](https://img.shields.io/badge/SASS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white)
+![Typescript](https://img.shields.io/badge/TypeScript-%23007ACC.svg?style=for-the-badge&logo=TypeScript&logoColor=white)
+[![Material-UI](https://img.shields.io/badge/Material--UI-%230081CB.svg?style=for-the-badge&logo=material-ui&logoColor=white)](https://material-ui.com/)
+![NGXS](https://img.shields.io/badge/NGXS-%23B7178C.svg?style=for-the-badge&logo=NGXS&logoColor=white)
 
-## Further help
+## Project features
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+- BEM methodology
+- Material UI
+- Typescript
+- NGXS
