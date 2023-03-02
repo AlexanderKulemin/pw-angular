@@ -1,7 +1,9 @@
 <div class="user">
   <div class="user__photo">
-    <img src="../../../assets/user.png" alt="photo">
+    <img src="../../../assets/user.png" alt="photo" />
   </div>
-  <div class="user__name">{{name}}</div>
-  <div class="user__balance">Balance - <span class="user__balance-value">{{balance}} PW</span></div>
+  <div class="user__name">{{ name$ | async }}</div>
+  <div class="user__balance">
+    Balance - <span class="user__balance-value">{{ balance }} PW</span>
+  </div>
 </div>
